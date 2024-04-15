@@ -1,3 +1,4 @@
+[![Docker Repository on Quay](https://quay.io/repository/steamutils/steamcmd/status "Docker Repository on Quay")](https://quay.io/repository/steamutils/steamcmd)
 # steamcmd
 steamcmd container image
 
