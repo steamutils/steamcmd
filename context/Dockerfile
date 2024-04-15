@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi9-minimal:latest
 
-RUN microdnf install -y glibc.i686 libstdc++.i686 tar gzip \
+RUN microdnf reinstall -y glibc.i686 libstdc++.i686 tar gzip \
 	--setopt=install_weak_deps=0 \
 	--setopt=tsflags=nodocs \
 	&& microdnf clean all -y
