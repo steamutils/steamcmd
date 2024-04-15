@@ -9,7 +9,7 @@ Guide recommendations:
 
 You can obviously use docker if you prefer. docker-compose instructions are not included, in favor of kube play.
 
-## >>> [Examples](github.com/steamutils/steamcmd/examples) <<<
+## >>> [Examples](examples/) <<<
 
 ## Quickstart: Manual
 
