@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi9-minimal:latest
 
-RUN microdnf reinstall -y glibc.i686 libstdc++.i686 tar gzip \
+RUN microdnf install -y glibc.i686 libstdc++.i686 tar gzip \
 	--setopt=install_weak_deps=0 \
 	--setopt=tsflags=nodocs \
 	&& microdnf clean all -y
@@ -19,6 +19,7 @@ RUN ln -s /root/.steam/linux32 /root/.steam/sdk32 \
 	&& ln -s /root/.steam/sdk64/steamclient.so /root/.steam/sdk64/steamservice.so
 
 ENV PATH $PATH:/root/.steam
+LABEL org.opencontainers.image.source=https://github.com/steamutils/steamcmd
 LABEL NAME=steamcmd
 ENTRYPOINT ["steamcmd.sh"]
 CMD ["+help", "+quit"]
